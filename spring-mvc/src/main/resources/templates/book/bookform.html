@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Book Form</title>
+</head>
+<body>
+	<form th:object="${book}" th:action="@{/book/}" method="post">
+	    <input type="hidden" th:field="*{id}"/>
+	    <h1>Edit Book Information</h1>
+	    <label>Book Name:</label>
+	    <input type="text" th:field="*{name}"/>
+	    <label>Book Description:</label>
+	    <input type="text" th:field="*{description}"/>
+	    <button type="submit">Submit</button>
+	</form>
+	<a href="#" th:href="@{'/'}">Back</a>
+</body>
+</html>

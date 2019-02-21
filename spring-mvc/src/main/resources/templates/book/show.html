@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Show Book</title>
+</head>
+<body>
+	<h4>Id:</h4>
+	<h4 title="ID" th:text=${book.id}>1</h4>
+	<h4>Name:</h4>
+	<h4 th:text="${book.name}">Book Name</h4>
+	<h4>Description:</h4>
+	<h4 th:text="${book.description}">Book Description</h4>
+	<a href="#" th:href="@{'/'}">Back</a>
+</body>
+</html>
