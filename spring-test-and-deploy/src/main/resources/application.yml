@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      database: spring_tests
+
+---
+spring:
+  profiles: stg
+  data:
+      mongodb.uri: ${MONGODB_URI}

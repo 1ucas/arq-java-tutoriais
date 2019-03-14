@@ -1,0 +1,19 @@
+machine:
+  services:
+    - docker
+  java:
+    version: oraclejdk8
+
+test:
+  pre:
+    - bash ci/security-checks.sh
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: staging-spring-tests
+
+general:
+  artifacts:
+    - /tmp/artifacts/hawkeye_report.json
